@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Debugger's eye - Detecting code errors</title>
+    </head>
+    <body>
+        <textarea id="in" placeholder="Write here your pice of code that doesen't work"></textarea><button onclick="run()">RUN THE CODE</button>
+        <div id="result"></div>
+    </body>
+    <script>
+        var datalist = []
+        var datajson = {}
+        function run(){
+            var inp = document.getElementById("in").value;
+        }
+        function correct(){
+            var inp = document.getElementById("in").value;
+            try{
+                eval(inp)
+                document.getElementById("result").innerHTML = "Correct code";
+            }
+            catch(err){
+                if(datalist.includes(err.name)){
+                    document.getElementById("result").innerHTML = datajson[err.name];
+                }
+                else{
+                    document.getElementById("result").innerHTML = "<b>" + err.name + "</b><br><p>" + err.message + "</p>"
+                }
+            }
+        }
+        function keys(e){
+            if(e.keyCode = 13){
+                correct()
+            }
+        }
+        document.getElementById("in").addEventListener("keydown", keys)
+    </script>
+</html>
