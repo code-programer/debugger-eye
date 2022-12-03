@@ -2,14 +2,17 @@
     <head>
         <link rel="stylesheet" href="style.css" type="text/css">
         <title>Debugger's eye - Detecting code errors</title>
+        <link rel="icon" type="image/png" href="favicon.png">
     </head>
     <body>
-        <textarea id="in" placeholder="Write here your pice of code that doesen't work"></textarea>
-        <div id="result"></div>
+        <div class="container">
+              <textarea id="myInput" class="input-group__input" placeholder="Write here your code"></textarea>
+                <div id="result"></div>
+        </div>
     </body>
     <script>
         function correct(){
-            var inp = document.getElementById("in").value;
+            var inp = document.getElementById("myInput").value;
             try{
                 eval(inp)
                 document.getElementById("result").innerHTML = "Correct code";
@@ -23,6 +26,6 @@
                 correct()
             }
         }
-        document.getElementById("in").addEventListener("keyup", keys)
+        document.getElementById("myInput").addEventListener("keyup", keys)
     </script>
 </html>
