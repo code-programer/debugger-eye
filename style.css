@@ -1,0 +1,10 @@
+#in{
+    all: unset;
+    border-radius: 25px;
+    width: 70%;
+}
+body{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
