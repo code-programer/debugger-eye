@@ -1,5 +1,10 @@
+@font-face {
+    font-family: sliced;
+    src: url(sliced.otf);
+  }  
 * {
     box-sizing: border-box;
+    font-family: "sliced";
 }
 :root {
     --background-size: min(100vw, 40em);
